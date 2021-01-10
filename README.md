@@ -1,2 +1,1 @@
-# Project_4
-Projet 4  JAVA d'Openclassroom 
+Sample project for OpenClassroom's fundamentals of Java
