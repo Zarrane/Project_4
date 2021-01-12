@@ -20,11 +20,11 @@ public class AnalyticsCounter{
 	 * @throws Exception
 	 */
 	public static void main(String args[]) throws Exception {
-		if(MySymptomesList.main("symptoms.txt")) {			
-			System.out.print("Pass");
-		}else {
-			System.out.print("Error");
-		}
+		ReadFile myReader = new ReadFile();
+		myReader.Read("symptoms.txt");//Read
+		
+		//Sort
+		//Write
 	}
 }
 
