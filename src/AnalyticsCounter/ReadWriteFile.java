@@ -4,13 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.TreeMap;
 /**
  * 
  * @author Zarrane
  * @version 1.0
  */
-public class ReadWriteFile implements ContractReadFile {
+public class ReadWriteFile implements ContractReadWriteFile {
 	/**
 	 * 
 	 * @param NameList
@@ -18,17 +19,12 @@ public class ReadWriteFile implements ContractReadFile {
 	 */
 	public  BufferedReader Reader = null;
 	
-	public boolean ReadAndWrite(String nameList) {							//Lis le fichier, le trie (Instancie "SortSymptoms"), puis écrit dans un fichier 
-		System.out.println("balise 0");
+	public boolean ReadAndWrite(String nameList) throws IOException {							//Lis le fichier, le trie (Instancie "SortSymptoms"), puis écrit dans un fichier 
 		try(FileReader myFileReader = new FileReader(nameList)){
-			
 			Reader = new BufferedReader(myFileReader);
-			
 			SortSymptoms mySymptoms = new SortSymptoms();
-			System.out.println("balise 1");
-			mySymptoms.SortAndWrite(Reader);
-			System.out.println("balise 2");
-			try(FileWriter writer = new FileWriter ("result.out")){		//Constantes.outputFile
+			mySymptoms.Sort(Reader);
+			try(FileWriter writer = new FileWriter (Constantes.outputFile)){		
 				for (String i : mySymptoms.symptomsList.keySet()) {						
 					writer.write(i + " --> " + mySymptoms.symptomsList.get(i) + "\n");	
 				}

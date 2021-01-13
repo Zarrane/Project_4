@@ -18,12 +18,11 @@ public class AnalyticsCounter{
 	 * 
 	 * @param args
 	 * @throws Exception
+	 * 
 	 */
 	public static void main(String args[]) throws Exception {
 		ReadWriteFile myReader = new ReadWriteFile();
-		if(myReader.ReadAndWrite("symptoms.txt")) {
-			System.out.println("Pass");
-		}
+		myReader.ReadAndWrite(Constantes.inputFile);
 	}
 }
 
