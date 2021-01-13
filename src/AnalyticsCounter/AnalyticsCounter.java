@@ -20,11 +20,10 @@ public class AnalyticsCounter{
 	 * @throws Exception
 	 */
 	public static void main(String args[]) throws Exception {
-		ReadFile myReader = new ReadFile();
-		myReader.Read("symptoms.txt");//Read
-		
-		//Sort
-		//Write
+		ReadWriteFile myReader = new ReadWriteFile();
+		if(myReader.ReadAndWrite("symptoms.txt")) {
+			System.out.println("Pass");
+		}
 	}
 }
 
