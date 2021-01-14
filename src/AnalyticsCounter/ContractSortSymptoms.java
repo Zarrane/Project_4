@@ -15,7 +15,7 @@ public interface ContractSortSymptoms {
 	
 	public TreeMap<String, Integer> symptomsList = new TreeMap<String, Integer>();
 
-	public default TreeMap<String, Integer> Sort(BufferedReader reader) throws IOException{	//recoit un BufferedReader et le transforme en TreeMap trié /ordre Alphabétique
+	public default TreeMap<String, Integer> Sort(BufferedReader reader) throws IOException{	//Receive a BufferedReader put it in the TreeMap automaticaly sort by alphabetical order
 		String line = reader.readLine();													
 		while (line != null) {										
 			if (symptomsList.containsKey(line))							

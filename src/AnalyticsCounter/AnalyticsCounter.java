@@ -20,9 +20,10 @@ public class AnalyticsCounter{
 	 * @throws Exception
 	 * 
 	 */
-	public static void main(String args[]) throws Exception {	//Fonction principale : Instancie ReadWriteFile, et utilise la fonction ReadAndWrite
-		ReadWriteFile myReader = new ReadWriteFile();
-		myReader.ReadAndWrite(Constantes.inputFile);
+	public static void main(String args[]) throws Exception {	// Instantiation of the object ReadWriteFile, and use function ReadAndWrite
+		ReadWriteFile myReader = new ReadWriteFile();			
+		myReader.ReadAndWrite(Constantes.inputFile);			
+
 	}
 }
 

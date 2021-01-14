@@ -14,7 +14,7 @@ import java.util.TreeMap;
 public class SortSymptoms {
 	public TreeMap<String, Integer> symptomsList = new TreeMap<String, Integer>();  
 	
-	public TreeMap<String, Integer> Sort(BufferedReader reader) throws IOException{	//recoit un BufferedReader et le transforme en TreeMap trié /ordre Alphabétique
+	public TreeMap<String, Integer> Sort(BufferedReader reader) throws IOException{	//Receive a BufferedReader put it in the TreeMap automaticaly sort by alphabetical order
 		String line = reader.readLine();
 	    if(line == null) {															
 			System.out.println("EXEPTION : NO AVALABLE CONTENT IN THE INPUT FILE");	

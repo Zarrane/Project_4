@@ -16,7 +16,7 @@ public interface ContractReadWriteFile {
 	
 	public  BufferedReader reader = null;
 	
-	public default boolean ReadAndWrite(String nameList) throws IOException {	//Lis le fichier, le tri (Instancie "SortSymptoms"), puis écrit dans un fichier 
+	public default boolean ReadAndWrite(String nameList) throws IOException {	// Read the file, sort it (Instanciation of "SortSymptoms"), then write in the outputfile 
 		FileReader myFileReader = new FileReader(nameList);
 		SortSymptoms mySymptoms = new SortSymptoms();
 		mySymptoms.Sort(reader);								
